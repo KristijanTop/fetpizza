@@ -1,0 +1,28 @@
+$colors: (
+  background-color: #ffe03e,
+  text-color: #1b1b1b,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+.primary-btn {
+  background: color(background-color);
+  outline: none;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 15px;
+  color: color(text-color);
+  font-family: "Rationale";
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.primary-btn:hover {
+  transform: scale(1.1);
+}
